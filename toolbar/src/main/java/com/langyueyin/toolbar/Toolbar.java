@@ -1,4 +1,4 @@
-package com.nibushi.toolbar;
+package com.langyueyin.toolbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,6 +6,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import com.nibushi.toolbar.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
