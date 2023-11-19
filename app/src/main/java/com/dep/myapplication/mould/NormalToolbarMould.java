@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import com.dep.myapplication.DpToPx;
 import com.dep.myapplication.R;
-import com.nibushi.toolbar.toolbar.Toolbar;
-import com.nibushi.toolbar.toolbar.ToolbarBaseMould;
+import com.nibushi.toolbar.Toolbar;
+import com.nibushi.toolbar.ToolbarBaseMould;
 
 import java.lang.ref.WeakReference;
 

@@ -1,4 +1,4 @@
-package com.nibushi.toolbar.toolbar;
+package com.nibushi.toolbar;
 
 
 public abstract class ToolbarBaseMould implements ToolbarBaseMouldImp {

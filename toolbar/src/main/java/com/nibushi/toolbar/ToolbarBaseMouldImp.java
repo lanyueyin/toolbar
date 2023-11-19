@@ -1,4 +1,4 @@
-package com.nibushi.toolbar.toolbar;
+package com.nibushi.toolbar;
 
 import android.content.Context;
 import android.view.View;
