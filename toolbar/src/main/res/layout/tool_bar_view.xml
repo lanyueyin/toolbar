@@ -15,7 +15,6 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/titleLayout"
         android:orientation="vertical"
