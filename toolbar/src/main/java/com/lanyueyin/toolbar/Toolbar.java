@@ -245,7 +245,6 @@ public class Toolbar extends LinearLayout {
         targetViewMap.get(target).setOrientation(orientation);
         return this;
     }
-
     /** @hide */
     @IntDef({HORIZONTAL, VERTICAL})
     @Retention(RetentionPolicy.SOURCE)
