@@ -29,20 +29,5 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
-
-//修改jar名字+将指定jar生成的地方
-task makeJar(type:Copy){
-    //如果之前存在，则先删除
-    delete 'build/libs/toolbar.jar'
-    //设置拷贝的文件
-    from('build/intermediates/packaged-classes/debug/')
-    //生成jar包后的文件目录位置
-    into('build/libs/')
-    //include,exclude参数来设置过滤
-    include('classes.jar')
-    //重命名
-    rename('classes.jar','demo.jar')
-}
-makeJar.dependsOn(build)

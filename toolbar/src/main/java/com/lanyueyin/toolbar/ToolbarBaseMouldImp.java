@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 
 public interface ToolbarBaseMouldImp {
+
     /**设置左边控件的初始化模板
      * @param context 上下文
      * @return

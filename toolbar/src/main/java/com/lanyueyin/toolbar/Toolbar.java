@@ -249,7 +249,6 @@ public class Toolbar extends LinearLayout {
     @IntDef({HORIZONTAL, VERTICAL})
     @Retention(RetentionPolicy.SOURCE)
     public @interface OrientationMode {}
-
     public static final int HORIZONTAL = 0;
     public static final int VERTICAL = 1;
 }
