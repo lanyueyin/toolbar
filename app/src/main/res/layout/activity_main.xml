@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <com.nibushi.toolbar.toolbar.Toolbar
+            android:id="@+id/toolbarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/topBgView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="15dp"
+                android:background="#FD2727">
+
+                <LinearLayout
+                    android:id="@+id/topBgView"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/biguo_open_top_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/middleBgView"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/biguo_open_middle_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topBgView"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <View
+                    android:id="@+id/lineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="34dp"
+                    app:layout_constraintStart_toStartOf="@id/middleBgView"
+                    app:layout_constraintEnd_toEndOf="@id/middleBgView"
+                    app:layout_constraintBottom_toBottomOf="@id/middleBgView"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/itemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/problemLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/itemLayout">
+
+                    <TextView
+                        android:id="@+id/alertTitleView"
+                        android:text="注意事项"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/alertSubTitleView"
+                        android:text="请认真阅读相关权益，折扣卡功能为虚拟商品，一旦购买不能退款，购买前请注意以下事项："
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/alertTitleView"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/alertContentView"
+                        android:text="1、自己报考的专业笔果题库，VIP，押密，视频课程等是否齐全。若专业较偏建议更换专业，若一定要自己喜欢的专业，笔果题库视频不齐全，不建议购买折扣卡。\n\n2、笔果折扣卡只提供考试报考通知，微信群等服务，不对考生考试成绩负责，不能保证考试通过拿到毕业证。考生是否能通过考试要看自己的努力。\n\n3、更多未尽事项，笔果保留最终的解释权。"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:lineSpacingExtra="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/alertSubTitleView"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/openVipView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/vip_open_buy"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/problemLayout"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <TextView
+                        android:id="@+id/openPriceView"
+                        android:text="¥0.00/"
+                        android:gravity="center"
+                        android:textColor="#FF0000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"/>
+
+                    <TextView
+                        android:text="立即开通"
+                        android:gravity="center"
+                        android:layout_marginStart="6dp"
+                        android:textColor="#FF0000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/serviceAgreementView"
+                    android:text="开通即视为您已阅读并且同意《笔果折扣卡服务协议》"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/openVipView"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

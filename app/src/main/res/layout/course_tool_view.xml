@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/practiceTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/modeLayout"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/slideView"
+                android:layout_width="88dp"
+                android:layout_height="30dp"
+                android:layout_margin="1dp"
+                android:background="@drawable/border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/answerModeView"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="答题"
+                android:textSize="14dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/purple_500"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/rememberModeView"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="背题"
+                android:textSize="14dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/black"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toEndOf="@id/answerModeView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/timeLayout"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/timeLabelView"
+                android:text="计时 "
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:drawableStart="@drawable/border"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/timeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

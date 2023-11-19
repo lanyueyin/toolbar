@@ -1,4 +1,4 @@
-package com.nibushi.toolbar;
+package com.dep.myapplication;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.nibushi.toolbar.test", appContext.getPackageName());
+        assertEquals("com.dep.myapplication", appContext.getPackageName());
     }
 }
