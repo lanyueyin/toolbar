@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.dep.myapplication.DpToPx;
 import com.dep.myapplication.R;
 import com.dep.myapplication.databinding.CourseToolViewBinding;
-import com.langyueyin.toolbar.ToolbarBaseMouldImp;
+import com.lanyueyin.toolbar.ToolbarBaseMouldImp;
 
 import androidx.databinding.DataBindingUtil;
 

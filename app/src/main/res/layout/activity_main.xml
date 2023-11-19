@@ -7,7 +7,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
-        <com.langyueyin.toolbar.Toolbar
+        <com.lanyueyin.toolbar.Toolbar
             android:id="@+id/toolbarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

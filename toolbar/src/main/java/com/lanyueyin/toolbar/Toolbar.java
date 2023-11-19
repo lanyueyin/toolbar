@@ -1,4 +1,4 @@
-package com.langyueyin.toolbar;
+package com.lanyueyin.toolbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
