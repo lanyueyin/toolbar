@@ -6,7 +6,7 @@
 5、可指定目标控件，Toolbar会为目标控件增加一个marginTop，当背景延伸到Toolbar底部时，防止Toolbar遮盖住目标控件
 # 使用
 ### 第一步:添加依赖
-    implementation 'com.github.lanyueyin:toolbar:1.8.2'
+    implementation 'com.github.lanyueyin:toolbar:1.0.3'
 ### 第二步: 新建一个类继承ToolbarBaseMould抽象类，实现其中需要的方法
     public class NormalToolbarMould extends ToolbarBaseMould{
       public NormalToolbarMould(Toolbar toolbar) {
