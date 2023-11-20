@@ -9,7 +9,6 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,8 +16,6 @@ import com.dep.myapplication.DpToPx;
 import com.dep.myapplication.R;
 import com.lanyueyin.toolbar.Toolbar;
 import com.lanyueyin.toolbar.ToolbarBaseMould;
-
-import java.lang.ref.WeakReference;
 
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.widget.NestedScrollView;
