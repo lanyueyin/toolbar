@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         cm.setPrimaryClip(mClipData);
     }
 
-
     /**Toast弹出消息
      * @param message 消息
      */
