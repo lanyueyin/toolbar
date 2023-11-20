@@ -26,7 +26,7 @@ public class NormalToolbarMould extends ToolbarBaseMould{
     private TextView titleView;
     private TextView[] rightView;
 
-    private int rightViewCount = 1;
+    private int rightViewCount;
 
     public NormalToolbarMould(Activity activity, Toolbar toolbar) {
         super(toolbar);

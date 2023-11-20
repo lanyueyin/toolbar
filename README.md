@@ -39,11 +39,11 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
 ### 第四步: Toolbar与ToolbarBaseMould的实现类绑定
-    new NormalToolbarMould(this， findViewById(R.id.toolbarView));
+    new NormalToolbarMould(this, findViewById(R.id.toolbarView));
 ### 第五步 (非必须) : 实现Toolbar不遮挡指定的控件
 在xml中为Toolbar添加属性
 
-    android:labelFor-"@id/..."
+    android:labelFor="@id/..."
 
 或者在代码中调用
 
