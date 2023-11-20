@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             copyText(projectLink);
             showMessage("复制成功");
         });
-
     }
 
     /**
