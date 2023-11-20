@@ -25,7 +25,7 @@ public class ToolbarDefaultMould implements ToolbarBaseMouldImp {
     public View initLeftMould(Context context) {
         leftView = getMould(context, "");
         leftView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        Drawable drawable = context.getDrawable(R.drawable.arrow_back);
+        Drawable drawable = context.getDrawable(R.drawable.back);
         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
         leftView.setCompoundDrawablesRelative(drawable, null, null, null);
         return leftView;
@@ -63,7 +63,7 @@ public class ToolbarDefaultMould implements ToolbarBaseMouldImp {
     public View initRightMould(Context context) {
         TextView leftView = getMould(context, "");
         leftView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-        Drawable drawable = context.getDrawable(R.drawable.head_share);
+        Drawable drawable = context.getDrawable(R.drawable.share);
         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
         leftView.setCompoundDrawablesRelative(drawable, null, null, null);
         return leftView;

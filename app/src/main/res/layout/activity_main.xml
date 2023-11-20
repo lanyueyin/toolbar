@@ -11,156 +11,184 @@
             android:id="@+id/toolbarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:labelFor="@+id/topBgView"
+            android:labelFor="@+id/headView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="15dp"
-                android:background="#FD2727">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:id="@+id/topBgView"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/biguo_open_top_bg"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-
-                <TextView
-                    android:id="@+id/middleBgView"
-                    android:textColor="@color/white"
-                    android:textSize="24dp"
-                    android:gravity="center_horizontal"
-                    android:background="@drawable/biguo_open_middle_bg"
+                <RelativeLayout
+                    android:id="@+id/backgroundView"
+                    android:background="@drawable/background"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/topBgView"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-                <View
-                    android:id="@+id/lineView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="34dp"
-                    app:layout_constraintStart_toStartOf="@id/middleBgView"
-                    app:layout_constraintEnd_toEndOf="@id/middleBgView"
-                    app:layout_constraintBottom_toBottomOf="@id/middleBgView"/>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/itemLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lineView"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <LinearLayout
+                        android:id="@+id/headView"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/round_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="8dp"
+                            android:textColor="@color/black"
+                            android:text="找不到\n      女朋友"
+                            android:gravity="left"
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            android:textColor="#FF0A0A"
+                            android:text="不!换!头!像"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/problemLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="5dp"
-                    android:padding="15dp"
-                    app:layout_constraintTop_toBottomOf="@+id/itemLayout">
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/alertTitleView"
-                        android:text="注意事项"
-                        android:textSize="14dp"
-                        android:textColor="@color/white"
+                        android:id="@+id/nicknameView"
+                        android:text="lanyueyin"
+                        android:textColor="@color/black"
+                        android:background="@drawable/gray_alpha_20"
+                        android:textSize="22dp"
+                        android:padding="4dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        android:layout_alignTop="@id/headView"
+                        android:layout_toEndOf="@id/headView"/>
 
                     <TextView
-                        android:id="@+id/alertSubTitleView"
-                        android:text="请认真阅读相关权益，折扣卡功能为虚拟商品，一旦购买不能退款，购买前请注意以下事项："
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/alertTitleView"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-                    <TextView
-                        android:id="@+id/alertContentView"
-                        android:text="1、自己报考的专业笔果题库，VIP，押密，视频课程等是否齐全。若专业较偏建议更换专业，若一定要自己喜欢的专业，笔果题库视频不齐全，不建议购买折扣卡。\n\n2、笔果折扣卡只提供考试报考通知，微信群等服务，不对考生考试成绩负责，不能保证考试通过拿到毕业证。考生是否能通过考试要看自己的努力。\n\n3、更多未尽事项，笔果保留最终的解释权。"
+                        android:id="@+id/sexAndOldView"
+                        android:text="2023-11-20"
+                        android:textColor="@color/black"
                         android:textSize="12dp"
-                        android:textColor="@color/white"
-                        android:lineSpacingExtra="2dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/alertSubTitleView"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                        android:background="@drawable/gray_alpha_20"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="2dp"
+                        android:drawableStart="@drawable/woman"
+                        android:layout_alignStart="@id/nicknameView"
+                        android:layout_below="@id/nicknameView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:text="Say : Hello world! Good good study, day day up!"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:background="@drawable/gray_alpha_20"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="2dp"
+                        android:layout_below="@id/sexAndOldView"
+                        android:layout_alignStart="@id/nicknameView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
-                <LinearLayout
-                    android:id="@+id/openVipView"
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/linkView"
+                    android:text="项目链接："
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:autoLink="web"
+                    android:textColorLink="#2196F3"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="@drawable/vip_open_buy"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginEnd="35dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/problemLayout"
-                    app:layout_constraintEnd_toEndOf="parent">
-                    <TextView
-                        android:id="@+id/openPriceView"
-                        android:text="¥0.00/"
-                        android:gravity="center"
-                        android:textColor="#FF0000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="42dp"/>
-
-                    <TextView
-                        android:text="立即开通"
-                        android:gravity="center"
-                        android:layout_marginStart="6dp"
-                        android:textColor="#FF0000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="42dp"
-                        android:textSize="18dp"/>
-                </LinearLayout>
+                    app:layout_constraintTop_toBottomOf="@id/backgroundView"
+                    app:layout_constraintEnd_toStartOf="@+id/copyView"/>
 
                 <TextView
-                    android:id="@+id/serviceAgreementView"
-                    android:text="开通即视为您已阅读并且同意《笔果折扣卡服务协议》"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:padding="4dp"
-                    android:textColor="@color/white"
+                    android:id="@+id/copyView"
+                    android:text="复制"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:background="@drawable/gray_alpha_20"
+                    android:backgroundTint="#BABABA"
+                    android:paddingStart="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
+                    app:layout_constraintTop_toTopOf="@id/linkView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/linkView"/>
+
+                <ImageView
+                    android:background="@drawable/md"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/openVipView"
+                    app:layout_constraintTop_toBottomOf="@id/linkView"
                     app:layout_constraintEnd_toEndOf="parent"/>
+                <!--<Button
+                    android:id="@+id/showNormalView"
+                    android:text="沉浸式"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/backgroundView"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <Button
+                    android:id="@+id/showSinkingView"
+                    android:text="沉浸式"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/showNormalView"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <Button
+                    android:id="@+id/titleAlignLeftView"
+                    android:text="右侧多按钮"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/showSinkingView"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <Button
+                    android:id="@+id/rightMultipleView"
+                    android:text="右侧多按钮"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleAlignLeftView"
+                    app:layout_constraintEnd_toEndOf="parent"/>-->
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

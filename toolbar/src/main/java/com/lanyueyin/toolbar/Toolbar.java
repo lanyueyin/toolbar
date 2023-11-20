@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 import com.nibushi.toolbar.R;
 
@@ -65,7 +66,7 @@ public class Toolbar extends LinearLayout {
     /**设置一个模版，根据这个模板创建控件
      * @param mould 模板，需要继承{@link ToolbarBaseMould}接口实现
      */
-    public void setMould(ToolbarBaseMould mould){
+    protected void setMould(ToolbarBaseMould mould){
         if(mould == null) return;
 
         for(String target : targetViewMap.keySet()){
@@ -104,6 +105,7 @@ public class Toolbar extends LinearLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        setPadding(0, getPaddingTop(), 0, getPaddingBottom());
         layout();
         addMarginToLabelView();
     }
@@ -183,27 +185,6 @@ public class Toolbar extends LinearLayout {
         targetViewMap.get(target).setPadding(left, top, right, bottom);
         return this;
     }
-    /**向对应目标添加组件
-     * @param target 可选值{@link Toolbar#LEFT}，{@link Toolbar#TITLE}，{@link Toolbar#RIGHT}
-     * @param layoutId 布局ID
-     * @return
-     */
-    public Toolbar addTargetView(String target, int layoutId){
-        LayoutInflater.from(getContext()).inflate(layoutId, targetViewMap.get(target), true);
-        return this;
-    }
-
-    /**向对应目标添加组件，并且制定组件的添加位置
-     * @param target 可选值{@link Toolbar#LEFT}，{@link Toolbar#TITLE}，{@link Toolbar#RIGHT}
-     * @param layoutId 布局ID
-     * @param index 在目标中的位置
-     * @return
-     */
-    public Toolbar addTargetView(String target, int layoutId, int index){
-        View view = LayoutInflater.from(getContext()).inflate(layoutId, targetViewMap.get(target), false);
-        targetViewMap.get(target).addView(view, index);
-        return this;
-    }
 
     /**向对应目标添加组件
      * @param target target 可选值{@link Toolbar#LEFT}，{@link Toolbar#TITLE}，{@link Toolbar#RIGHT}
@@ -211,28 +192,20 @@ public class Toolbar extends LinearLayout {
      * @return
      */
     public Toolbar addTargetView(String target, View view){
+        if (getChildCount() > 0) {
+            throw new IllegalStateException("Toolbar can host only one direct child");
+        }
+
         targetViewMap.get(target).addView(view);
         return this;
     }
 
-    /**向对应目标添加组件，并且制定组件的添加位置
+    /**移除目标中的组件
      * @param target 可选值{@link Toolbar#LEFT}，{@link Toolbar#TITLE}，{@link Toolbar#RIGHT}
-     * @param view 组件
-     * @param index 在目标中的位置
      * @return
      */
-    public Toolbar addTargetView(String target, View view, int index){
-        targetViewMap.get(target).addView(view, index);
-        return this;
-    }
-
-    /**移除目标中某个位置的组件
-     * @param target 可选值{@link Toolbar#LEFT}，{@link Toolbar#TITLE}，{@link Toolbar#RIGHT}
-     * @param index 在目标中的位置
-     * @return
-     */
-    public Toolbar removeTargetView(String target, int index){
-        targetViewMap.get(target).removeViewAt(index);
+    public Toolbar removeTargetView(String target){
+        targetViewMap.get(target).removeAllViews();
         return this;
     }
 
