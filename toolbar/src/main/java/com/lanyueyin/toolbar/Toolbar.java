@@ -46,6 +46,7 @@ public class Toolbar extends LinearLayout {
         super(context, attrs, defStyleAttr);
         init();
     }
+
     private void init(){
         //根据全屏状态设置，是否需要添加一个内边距保持不被系统状态栏遮挡
         setFitsSystemWindows(isWindowTranslucentStatusTrue());
