@@ -197,6 +197,7 @@ public class Toolbar extends LinearLayout {
         }
 
         targetViewMap.get(target).addView(view);
+        targetViewMap.get(target).setVisibility(VISIBLE);
         return this;
     }
 
@@ -206,6 +207,7 @@ public class Toolbar extends LinearLayout {
      */
     public Toolbar removeTargetView(String target){
         targetViewMap.get(target).removeAllViews();
+        targetViewMap.get(target).setVisibility(GONE);
         return this;
     }
 

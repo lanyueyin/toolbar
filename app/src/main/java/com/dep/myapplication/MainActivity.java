@@ -66,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // 将ClipData内容放到系统剪贴板里。
         cm.setPrimaryClip(mClipData);
     }
-
-
+    
     /**Toast弹出消息
      * @param message 消息
      */
