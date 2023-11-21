@@ -210,6 +210,7 @@ public class Toolbar extends LinearLayout {
         targetViewMap.get(target).setVisibility(GONE);
         return this;
     }
+
     /**设置目标中的组件的排列方向
      * @param target 可选值{@link Toolbar#LEFT}，{@link Toolbar#TITLE}，{@link Toolbar#RIGHT}
      * @param orientation 可选值{@link Toolbar#HORIZONTAL}，{@link Toolbar#VERTICAL}
