@@ -131,7 +131,6 @@ public class Toolbar extends LinearLayout {
         }
         return null;
     }
-
     /**为xml里labelFor属性中的控件添加标题栏高度的外边距，防止标题栏遮挡
      *
      */
